@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcionPDF</title>
+    <style>
+    label{
+        color:cadetblue
+    }  
+    input{
+        color:darkslategray
+    }  
+    </style>
+</head>
+<body>
+    <label >Multiplicacion <input id="r" type="text" value="sin resultado"></label>
+    <br>
+    <p id="p1"></p>
+   <script>
+       var p1;
+       var p2;
+     do{ 
+        p1=parseInt(prompt("Ingrese un numero"));
+        p2=parseInt(prompt("Ingrese otro numero"));
+
+        if(isNaN(p1)|| isNaN(p2)){
+            alert("Debe ingresar valores para realizar el calculo");
+        }
+     }while(isNaN(p1)|| isNaN(p2));
+    
+    
+     function miOperacion(p1,p2){
+      return p1*p2;
+
+    }
+    function suma(p1,p2){
+        document.getElementById("p1").innerHTML="Suma "+(p1+p2);
+    }
+    if(p1!=null && p2!=null){
+    suma(p1,p2);
+    document.getElementById("r").value=miOperacion(p1,p2);
+    }else{
+     document.write("gracias por utiliza el sistema")
+
+    }
+   </script>
+</body>
+</html>

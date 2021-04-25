@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventoJavaScript</title>
+</head>
+<body>
+
+    <!--
+    <button onclick="saludar('Marco')">Click</button>
+    <input onclick="saludar('Marco')" type="button" value="Marco">
+    <input onclick="saludar('Mariano')" type="button" value="Mariano">
+    <input onclick="saludar('Javier')" type="button" value="Javier">
+    <input onclick="saludar('Maria')" type="button" value="Maria">
+-->
+    
+    <button id="b1" onclick="saludar()">Paulo</button>
+    <button id="b2" onclick="saludar()">Maria</button>
+    <button id="b3" onclick="saludar()">Noel</button>
+    <button id="b4" onclick="saludar()">Amado</button>
+  
+    <script> 
+
+     /*
+     function saludar(nombre){
+     alert("Hola como estas "+nombre);
+     }
+     */
+     
+     function saludar(nombre){
+      return ("  Hola educacion it "+nombre);   
+     }
+     
+
+     
+     var boton=document.getElementsByTagName('button');
+     /*
+     var salida="";
+     for(var i=0;i<boton.length;i++){
+       salida=salida+"</br>"+saludar(boton[i].innerHTML);
+
+     }
+    document.write(salida);
+    */
+
+    function saludar1(nombre){
+      alert("  Hola educacion it "+nombre);   
+     }
+    for(var i=0;i<boton.length;i++){
+        boton[i].onclick=function(){saludar1(this.innerHTML)};
+
+     }
+
+    </script>
+</body>
+</html>

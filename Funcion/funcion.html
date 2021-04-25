@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     //variables de ambito global que almacenan valores de cadenas
+     var nombre="Marco";
+     var apellido="Amado";
+     
+     //Funcion saludoSinRetornoSinParametro()  que toma las variables globales y
+     //mediante el metodo write muestra el saludo
+     //Si no llamamos al metodo no mostrara el saludo
+     //para llamar al metodo procedemos a escribir la firma o nombre del mismo.
+     //Este metodo no retorna un valor,solo lo muestra
+     //El cuerpo del metodo esta delimitado por el las llavas de apertura { y  de cierre }
+     function saludoSinRetornoSinParametro(){ 
+       document.write("Hola saludoSinRetornoSinParametro "+nombre+" "+apellido+"</br>");
+     }
+   
+     saludoSinRetornoSinParametro(); //llamada al metodo saludoSinRetornoSinParametro
+     
+     
+
+
+     /* 
+     Funcion saludoSinRetornoPorParametro(nombre,apellido), que recibe por parametro el nombre y apellido (nombre,apellido)
+     Dentro del cuerpo del metodo hay variables locales que solo tienen existencia y se puede acceder
+     dentro del cuerpo del metodo.
+
+     */
+    function saludoSinRetornoPorParametro(nombre,apellido){
+        var name=nombre;
+        var lastName=apellido;
+      document.write("Hola saludoSinRetornoPorParametro "+name+ " "+lastName);
+    }
+
+    saludoSinRetornoPorParametro(nombre,apellido); //llamada a funcion
+
+
+
+   /*
+    Funcion saludoConRetornoPorParametro que recibe dos parametros (nombre,apellido).
+    Tiene tres variables locales al metodo, que solo existen dentro del mismo.
+    La variable saludos concatena una cadena mas el valor contenido en las variables name y lastName.
+    Por ultimo se retorna la variable saludo, mediante la palabra reservada return.
+    La palabra reservada return corta la ejecucion del metodo, todo lo que se codifique por debajo de el no se ejecuta
+
+
+   */
+
+    function saludoConRetornoPorParametro(nombre,apellido){
+        var name=nombre;
+        var lastName=apellido;
+        var saludo="";
+
+        saludo="Hola saludosConRetornoPorParametro "+name+" "+lastName;
+
+        return saludo;
+
+    }
+      
+    var salida=saludoConRetornoPorParametro(nombre,apellido)//La llamada al metedo devuelve un valor(retorna), al ser llamado
+    //El retorno del valor de la funcion en este caso, se la asigno a la variable salida
+    console.log("Mostrando la variable salida =>"+salida);//Para visualizar el valor de retorno, mostramos la variable salida
+    //llamada al metodo saludoSinRetornoPorParametro
+     /*
+     function saludo(){
+       document.write("Hola como estas "+nombre+" "+apellido);
+     }
+     
+     Estructura de una funcion
+
+     1-Palabra reservada =>function
+     2-nombre del metodo => saludo()
+     3-Parentesis (), en donde pueden recibir parametros (parametro1,parametro2) o no ()
+     4-Puede tener un retorno , que se determina con la palabra reservada => return
+     5-variables locales al metodo, que se declaran como las globales, solo que tiene existencia dentro del metodo
+     y cuando termina de ejecucion ya no exiten. => var variable local.
+
+     */
+    </script>
+</body>
+</html>

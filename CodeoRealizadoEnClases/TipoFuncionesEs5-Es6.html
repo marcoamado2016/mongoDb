@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var apellido="Amado";
+     var nombre="Marco";
+function saludoSinRetornoPorParametro(nombre="sin nombre",apellido="sin apellido"){ //paarametros por defecto
+        var name=nombre;
+        var lastName=apellido;
+      document.write("Hola saludoSinRetornoPorParametro "+name+ " "+lastName);
+    }
+
+    saludoSinRetornoPorParametro(); //llamada a funcion
+
+
+
+
+
+
+    function saludoSinRetornoPorParametro(nombre,apellido){
+        var name=nombre?nombre:"sin nombre";//operador ternario
+        var lastName=nombre?nombre:"sin apellido";
+      document.write("<br>Hola saludoSinRetornoPorParametro "+name+ " "+lastName);
+    }
+
+    saludoSinRetornoPorParametro(); 
+
+
+     const saludo=function (nombre){
+      console.log("Hola ",nombre)
+     }
+
+     saludo("marco");
+
+
+     const flecha=(a,b)=> a+b;
+
+     
+     
+
+      alert(flecha(2,3))
+
+
+   
+    </script>
+</body>
+</html>
